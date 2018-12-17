@@ -28,6 +28,15 @@
           }
         ]
       }
+    },
+    "01-nsg01-name": {
+      "value": "01-nsg01"
+    },
+    "01-nsg02-name": {
+      "value": "01-nsg02"
+    },
+    "01-nsg03-name": {
+      "value": "01-nsg03"
     }
   },
 
