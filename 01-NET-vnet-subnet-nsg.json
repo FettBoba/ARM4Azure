@@ -21,6 +21,10 @@
           {
             "name": "01-subnet-dmz02",
             "addressPrefix": "10.0.2.0/24"
+          },
+          {
+            "name": "01-subnet-dmz03",
+            "addressPrefix": "10.0.3.0/24"
           }
         ]
       }
@@ -55,6 +59,12 @@
             "name":"[parameters('VNetSettings').subnets[1].name]",
             "properties": {
               "addressPrefix": "[parameters('VNetSettings').subnets[1].addressPrefix]"
+            }
+          },
+          {
+            "name":"[parameters('VNetSettings').subnets[2].name]",
+            "properties": {
+              "addressPrefix": "[parameters('VNetSettings').subnets[2].addressPrefix]"
             }
           }
         ]
