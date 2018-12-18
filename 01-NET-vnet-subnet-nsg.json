@@ -27,20 +27,6 @@
             "addressPrefix": "10.0.3.0/24"
           }
         ],
-        "nsgs": [
-          {
-            "name": "01-nsg01-name",
-            "01-nsg01-name": "01-nsg01"
-          },
-          {
-            "name": "01-nsg02-name",
-            "01-nsg01-name": "01-nsg02"
-          },
-          {
-            "name": "01-nsg03-name",
-            "01-nsg01-name": "01-nsg03"
-          }
-        ],
         "dhcpIPs": [
           {
             "name": "dhcpIP",
@@ -48,7 +34,14 @@
           }
         ]   
       }
-    }
+    },
+    "01-nsg01-name": {
+      "type": "string",
+      "defaultValue": "01-nsg01",
+      "metadata": {
+        "description": "the name of the first NSG"
+      }
+    }   
   },
 
   "resources": [
