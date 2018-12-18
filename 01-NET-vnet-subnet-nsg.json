@@ -46,6 +46,46 @@
 
   "resources": [
     {
+      "apiVersion": "2015-06-15",
+      "type": "Microsoft.Network/virtualNetworks",
+      "name": "[parameters('VNetSettings').name]",
+      "location": "[parameters('VNetSettings').location]",
+      "properties": {
+        "addressSpace":{
+          "addressPrefixes": [
+            "[parameters('VNetSettings').addressPrefixes[0].addressPrefix]"
+          ]
+        },
+        "dhcpOptions":{
+            "dnsServers": [
+              "[parameters('VNetSettings').dhcpIPs[0].dnsServers]"
+            ]
+          },
+
+        "subnets":[
+          {
+            "name":"[parameters('VNetSettings').subnets[0].name]",
+            "properties": {
+              "addressPrefix": "[parameters('VNetSettings').subnets[0].addressPrefix]"
+            }
+          },
+          {
+            "name":"[parameters('VNetSettings').subnets[1].name]",
+            "properties": {
+              "addressPrefix": "[parameters('VNetSettings').subnets[1].addressPrefix]"
+            }
+          },
+          {
+            "name":"[parameters('VNetSettings').subnets[2].name]",
+            "properties": {
+              "addressPrefix": "[parameters('VNetSettings').subnets[2].addressPrefix]"
+            }
+          }
+        ]
+      }
+    },
+
+    {
       "apiVersion": "2015-05-01-preview",
       "type": "Microsoft.Network/networkSecurityGroups",
       "name": "[parameters('01-nsg01-name')]",
@@ -78,48 +118,6 @@
               "access": "Allow",
               "priority": 101,
               "direction": "Inbound"
-            }
-          }
-        ]
-      }
-    },
-
-    {
-      "apiVersion": "2015-06-15",
-      "type": "Microsoft.Network/virtualNetworks",
-      "name": "[parameters('VNetSettings').name]",
-      "location": "[parameters('VNetSettings').location]",
-      "properties": {
-        "addressSpace":{
-          "addressPrefixes": [
-            "[parameters('VNetSettings').addressPrefixes[0].addressPrefix]"
-          ]
-        },
-        "dhcpOptions":{
-            "dnsServers": [
-              "[parameters('VNetSettings').dhcpIPs[0].dnsServers]"
-            ]
-          },
-
-
-          
-        "subnets":[
-          {
-            "name":"[parameters('VNetSettings').subnets[0].name]",
-            "properties": {
-              "addressPrefix": "[parameters('VNetSettings').subnets[0].addressPrefix]"
-            }
-          },
-          {
-            "name":"[parameters('VNetSettings').subnets[1].name]",
-            "properties": {
-              "addressPrefix": "[parameters('VNetSettings').subnets[1].addressPrefix]"
-            }
-          },
-          {
-            "name":"[parameters('VNetSettings').subnets[2].name]",
-            "properties": {
-              "addressPrefix": "[parameters('VNetSettings').subnets[2].addressPrefix]"
             }
           }
         ]
