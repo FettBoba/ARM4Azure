@@ -44,7 +44,7 @@
         "dhcpIPs": [
           {
             "name": "dhcpIP",
-            "dnsServers": "01-nsg01"
+            "dnsServers": "10.0.0.4"
           }
         ]   
       }
