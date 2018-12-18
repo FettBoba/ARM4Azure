@@ -26,17 +26,22 @@
             "name": "01-subnet-dmz03",
             "addressPrefix": "10.0.3.0/24"
           }
+        ],
+        "nsgs": [
+          {
+            "name": "01-nsg01-name",
+            "01-nsg01-name": "01-nsg01"
+          },
+          {
+            "name": "01-nsg02-name",
+            "01-nsg01-name": "01-nsg02"
+          },
+          {
+            "name": "01-nsg03-name",
+            "01-nsg01-name": "01-nsg03"
+          }
         ]
       }
-    },
-    "01-nsg01-name": {
-      "defaultValue": "01-nsg01"
-    },
-    "01-nsg02-name": {
-      "defaultValue": "01-nsg02"
-    },
-    "01-nsg03-name": {
-      "defaultValue": "01-nsg03"
     }
   },
 
