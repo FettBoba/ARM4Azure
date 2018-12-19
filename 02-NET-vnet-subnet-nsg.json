@@ -11,28 +11,28 @@
     },
     "addressPrefix": {
       "type": "string",
-      "defaultValue": "10.0.0.0/16",
+      "defaultValue": "10.240.0.0/16",
       "metadata": {
         "description": "CIDR address space for ARM generated Network"
       }
     },
     "02-subnet01Prefix": {
       "type": "string",
-      "defaultValue": "10.0.1.0/24",
+      "defaultValue": "10.240.0.0/24",
       "metadata": {
         "description": "CIDR prefix for the FrontEnd Subnet"
       }
     },
     "02-subnet02Prefix": {
       "type": "string",
-      "defaultValue": "10.0.2.0/24",
+      "defaultValue": "10.240.1.0/24",
       "metadata": {
         "description": "CIDR prefix for the Application Subnet"
       }
     },
     "02-subnet03Prefix": {
       "type": "string",
-      "defaultValue": "10.0.3.0/24",
+      "defaultValue": "10.240.2.0/24",
       "metadata": {
         "description": "CIDR prefix for the Database Subnet"
       }
